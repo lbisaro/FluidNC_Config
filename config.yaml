@@ -166,12 +166,12 @@ axes:
   z:
     steps_per_mm: 200.000
     max_rate_mm_per_min: 500.000
-    acceleration_mm_per_sec2: 30.000
+    acceleration_mm_per_sec2: 100.000
     max_travel_mm: 80.000
-    soft_limits: true
+    soft_limits: false
     homing:
       cycle: 0
-      allow_single_axis: true
+      allow_single_axis: false
       positive_direction: true
       mpos_mm: 0.000
       feed_mm_per_min: 50.000
@@ -291,7 +291,7 @@ control:
   macro3_pin: NO_PIN
 
 macros:
-  startup_line0: M64 P0  # Enciende el pin digital 0 (Cooler) al iniciar
+  startup_line0: 
   startup_line1:
   macro0:
   macro1:
@@ -348,4 +348,4 @@ user_outputs:
 #  speed_map: 0=0.000% 1000=100.000%
 #  off_on_alarm: false
 
-# Inputs left to right gpoi.25/33/32/35/34/39/36
+# Inputs right to left gpoi. 36/39/34/35/32/33/25
