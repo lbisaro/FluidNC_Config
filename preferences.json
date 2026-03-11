@@ -3,7 +3,7 @@
   "language": "default",
   "theme": "default",
   "autoload": true,
-  "mobileview": false,
+  "mobileview": true,
   "audio": false,
   "hapticfeedback": false,
   "audiofeedback": false,
