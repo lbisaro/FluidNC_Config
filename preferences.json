@@ -3,7 +3,7 @@
   "language": "default",
   "theme": "default",
   "autoload": true,
-  "mobileview": true,
+  "mobileview": false,
   "audio": false,
   "hapticfeedback": true,
   "audiofeedback": false,
@@ -25,24 +25,24 @@
     "value": "jog"
    },
    {
-    "id": "Probe",
-    "name": "probe"
-   },
-   {
-    "id": "Terminal",
-    "name": "terminal"
+    "id": "Macros",
+    "name": "macros"
    },
    {
     "id": "Files",
     "name": "files"
    },
    {
-    "id": "Macros",
-    "name": "macros"
-   },
-   {
     "id": "Notifications",
     "name": "notification"
+   },
+   {
+    "id": "Probe",
+    "name": "probe"
+   },
+   {
+    "id": "Terminal",
+    "name": "terminal"
    },
    {
     "id": "Overrrides",
@@ -70,7 +70,7 @@
     "refreshtime": "2000"
    }
   ],
-  "showterminalpanel": true,
+  "showterminalpanel": false,
   "openterminalonstart": true,
   "verbose": true,
   "autoscroll": true,
@@ -237,66 +237,26 @@
   "openmacrosonstart": true,
   "macros": [
    {
-    "id": "xsht27tfi",
-    "name": "Disable Motors",
-    "icon": "ZapOff",
-    "action": "$MD",
+    "id": "350exxwh1",
+    "name": "Z-Probe",
+    "icon": "Underline",
+    "action": "/macros/macro_z_probe.gcode",
+    "type": "FS",
+    "key": ""
+   },
+   {
+    "id": "rkgt1v5t5",
+    "name": "Go Z 0",
+    "icon": "ChevronsDown",
+    "action": "G1 Z0 F300",
     "type": "CMD",
     "key": ""
    },
    {
-    "id": "0wclpq1vx",
-    "name": "26 on",
-    "icon": "LogOut",
-    "action": "M62 P0",
-    "type": "CMD",
-    "key": ""
-   },
-   {
-    "id": "n44adfkcs",
-    "name": "26 off",
-    "icon": "XCircle",
-    "action": "M63 P0",
-    "type": "CMD",
-    "key": ""
-   },
-   {
-    "id": "9flzi8o2k",
-    "name": "27 on",
-    "icon": "LogOut",
-    "action": "M62 P1",
-    "type": "CMD",
-    "key": ""
-   },
-   {
-    "id": "96j6sjv0s",
-    "name": "27 off",
-    "icon": "XCircle",
-    "action": "M63 P1",
-    "type": "CMD",
-    "key": ""
-   },
-   {
-    "id": "wc7z4v1ji",
-    "name": "Pin 2 on",
-    "icon": "LogOut",
-    "action": "M62 P2",
-    "type": "CMD",
-    "key": ""
-   },
-   {
-    "id": "eppw9kq8v",
-    "name": "Pin 2 Off",
-    "icon": "XCircle",
-    "action": "M63 P2",
-    "type": "CMD",
-    "key": ""
-   },
-   {
-    "id": "rvqcgxzfm",
-    "name": "Save Config",
-    "icon": "Save",
-    "action": "$CD=config.yaml",
+    "id": "71ymezttf",
+    "name": "Centro XY",
+    "icon": "Loader",
+    "action": "G1 X291.5 Y206.5 F2000",
     "type": "CMD",
     "key": ""
    }
@@ -310,7 +270,7 @@
   "openprobeonstart": true,
   "probefeedrate": "100",
   "maxprobe": "20",
-  "probethickness": "19.5",
+  "probethickness": "19.3",
   "proberetract": "10",
   "probepostcommand": "G10 L20 P1 #selected_axis##probe_thickness#;$J=G91 G21 F1000 Z#probe_retract#",
   "showlaserpanel": false,
